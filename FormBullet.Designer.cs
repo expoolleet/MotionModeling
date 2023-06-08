@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.checkBoxFindOptimalAngle = new System.Windows.Forms.CheckBox();
             this.groupBoxDistance = new System.Windows.Forms.GroupBox();
-            this.labelDistance = new System.Windows.Forms.Label();
             this.textBoxDistance = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxDelta = new System.Windows.Forms.TextBox();
@@ -96,24 +95,14 @@
             // 
             // groupBoxDistance
             // 
-            this.groupBoxDistance.Controls.Add(this.labelDistance);
             this.groupBoxDistance.Controls.Add(this.textBoxDistance);
             this.groupBoxDistance.Enabled = false;
             this.groupBoxDistance.Location = new System.Drawing.Point(12, 120);
             this.groupBoxDistance.Name = "groupBoxDistance";
-            this.groupBoxDistance.Size = new System.Drawing.Size(297, 63);
+            this.groupBoxDistance.Size = new System.Drawing.Size(219, 63);
             this.groupBoxDistance.TabIndex = 10;
             this.groupBoxDistance.TabStop = false;
             this.groupBoxDistance.Text = "Необходимая дистанция";
-            // 
-            // labelDistance
-            // 
-            this.labelDistance.AutoSize = true;
-            this.labelDistance.Location = new System.Drawing.Point(171, 33);
-            this.labelDistance.Name = "labelDistance";
-            this.labelDistance.Size = new System.Drawing.Size(12, 18);
-            this.labelDistance.TabIndex = 10;
-            this.labelDistance.Text = ":";
             // 
             // textBoxDistance
             // 
@@ -269,28 +258,28 @@
             // 
             this.chartRectangular.BackColor = System.Drawing.Color.WhiteSmoke;
             this.chartRectangular.BorderlineColor = System.Drawing.Color.LightGray;
-            chartArea1.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
-            chartArea1.AxisX.LineWidth = 2;
-            chartArea1.AxisX.ScaleBreakStyle.Enabled = true;
-            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.DimGray;
-            chartArea1.AxisY.LineWidth = 2;
-            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.DimGray;
-            chartArea1.BackColor = System.Drawing.Color.WhiteSmoke;
-            chartArea1.Name = "ChartArea1";
-            this.chartRectangular.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartRectangular.Legends.Add(legend1);
+            chartArea3.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea3.AxisX.LineWidth = 2;
+            chartArea3.AxisX.ScaleBreakStyle.Enabled = true;
+            chartArea3.AxisX.TitleForeColor = System.Drawing.Color.DimGray;
+            chartArea3.AxisY.LineWidth = 2;
+            chartArea3.AxisY.TitleForeColor = System.Drawing.Color.DimGray;
+            chartArea3.BackColor = System.Drawing.Color.WhiteSmoke;
+            chartArea3.Name = "ChartArea1";
+            this.chartRectangular.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartRectangular.Legends.Add(legend3);
             this.chartRectangular.Location = new System.Drawing.Point(12, 206);
             this.chartRectangular.Name = "chartRectangular";
             this.chartRectangular.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series1.BorderWidth = 2;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "bullet";
-            series1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            series1.ShadowOffset = -2;
-            this.chartRectangular.Series.Add(series1);
+            series3.BorderWidth = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Legend = "Legend1";
+            series3.Name = "bullet";
+            series3.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            series3.ShadowOffset = -2;
+            this.chartRectangular.Series.Add(series3);
             this.chartRectangular.Size = new System.Drawing.Size(582, 385);
             this.chartRectangular.TabIndex = 7;
             this.chartRectangular.Text = "chart1";
@@ -324,6 +313,7 @@
             this.Controls.Add(this.labelLength);
             this.Controls.Add(this.chartRectangular);
             this.Controls.Add(this.groupBox5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormBullet";
             this.Text = "Снаряд";
             this.groupBox5.ResumeLayout(false);
@@ -370,6 +360,5 @@
         private System.Windows.Forms.CheckBox checkBoxFindOptimalAngle;
         private System.Windows.Forms.GroupBox groupBoxDistance;
         private System.Windows.Forms.TextBox textBoxDistance;
-        private System.Windows.Forms.Label labelDistance;
     }
 }

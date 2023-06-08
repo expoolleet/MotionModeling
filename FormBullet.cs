@@ -58,9 +58,8 @@ namespace MotionModeling
                 double optimal_distance = 0;
                 if (checkBoxFindOptimalAngle.Checked)
                 {
-                    (angle, optimal_distance) = FindOptimalLaunchAngle(mass, diameter, velocity, c_d, Convert.ToDouble(textBoxDistance.Text));
+                    angle = FindOptimalLaunchAngle(mass, diameter, velocity, c_d, Convert.ToDouble(textBoxDistance.Text));
                     textBoxAngle.Text = angle.ToString();
-                    labelDistance.Text = $": {optimal_distance}";
                 }
                 else
                 {
@@ -108,7 +107,7 @@ namespace MotionModeling
             return (xList, yList, distance, height);
         }
 
-        private (double, double) FindOptimalLaunchAngle(double m, double d, double v0, double c_d, double target_distance)
+        private double FindOptimalLaunchAngle(double m, double d, double v0, double c_d, double target_distance)
         {
             var min_angle = 0;
             var max_angle = 90;
@@ -126,7 +125,7 @@ namespace MotionModeling
                     optimal_angle = angle;
                 }
             }
-            return (optimal_angle, max_distance);
+            return optimal_angle;
         }
 
         private void checkBoxFindOptimalAngle_Click(object sender, EventArgs e)
